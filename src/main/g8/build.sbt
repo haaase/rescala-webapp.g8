@@ -12,12 +12,14 @@ lazy val cfg = new {
   val version_212 = "2.12.6"
 
   val base = List(
-    organization := "$organization",
+    organization := "$organization$",
     scalaVersion := version_212,
     crossScalaVersions := Seq(version_211, version_212),
     baseScalac,
     autoAPIMappings := true,
+    resolvers += Resolver.bintrayRepo("stg-tud", "maven"),
     Compile / doc / scalacOptions += "-groups",
+    organization := "de.tuda.stg",
   )
 
   lazy val baseScalac = scalacOptions ++= List(
