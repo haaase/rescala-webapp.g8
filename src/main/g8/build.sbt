@@ -1,6 +1,6 @@
 lazy val root = project.in(file("."))
   .enablePlugins(ScalaJSPlugin)
-  .settings(name := "$name",
+  .settings(name := "$name$",
     cfg.base, cfg.rescalatags, cfg.rescala,
     scalaSource in Compile := baseDirectory.value)
 
